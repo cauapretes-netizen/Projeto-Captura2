@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <!-- Básico -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Metas para mobile -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Metadados do site -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>Barbarida e Barber</title>
+
+  <!-- CSS principal (Bootstrap) -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+  <!-- Font Awesome -->
+  <link href="css/font-awesome.min.css" rel="stylesheet" />
+  <!-- lightbox -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css" rel="stylesheet" />
+  <!-- Estilos personalizados -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- Estilos responsivos -->
+  <link href="css/responsive.css" rel="stylesheet" />
+</head>
+
+<body>
+
+  <div class="hero_area">
+    <!-- seção de cabeçalho -->
+    <header class="header_section">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container ">
+          <a class="navbar-brand" href="index.html">
+            <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxISEhUTEhIWFRUXFx8YFxgXFxgYGhsXGxgfHSAaGBoYHiggGR0lIBgYITEhJyotLi4uGB83ODMuNygtLisBCgoKDg0OGxAQGzIlHyUvLTI3Ky0tLSsrNy01NzU3LzUxLy01Ky01KzUtLS0tLzA3LSsrNTYtLjU3NzctLTc3Lf/AABEIAOEA4QMBIgACEQEDEQH/xAAcAAACAgMBAQAAAAAAAAAAAAAABgUHAQQIAwL/xABUEAACAQMCAwYCBgQJBwcNAAABAgMABBESIQUGMQcTIkFRYTJxFCNSgZGhQmJykiQzNFNzgrGywQgVFkNjotFkdJSz0uHwFyU1RFRVZYOjwsPE8f/EABoBAQACAwEAAAAAAAAAAAAAAAACBAEDBQb/xAAmEQEAAgEEAQMEAwAAAAAAAAAAAQIDBBESITEFUWEiQdHwE4Gh/9oADAMBAAIRAxEAPwC8aKKKAooooCiiigKKKKAooooCiionmrja2VpNcsMiNchftOdlX72Kj76CM5v51isiI1UzXLKXWFSFwg/1kzt4YYx9tvf0OIawt+MXuHe+W0Q5wtvbhtvL6yfDNt+kq6T5E1odm/LDTF7288bvJq36PMjYLsD1SNgUjX4Ro19Sum0KBKbl3i0Xig4t3uP9Xc26FSfd48Mv3V7cE5ybvhacQg+i3DfxZDaoJ8HB7mT7X6h3GR57U30g9ptrEFj78/weeQRSEbGGQ7R3MZ/RZWwD6qd84oH+ilbs+4vLPA8Vyf4TayG3nP2mX4ZB7OpBz65ppoCiiigKKKKAooooCiiigKKKKAooooCiiigKKKKAooooCiiigKK0uLcWgtozLcSpEg/SdgBn0HqfYb0n/wCm91ebcJsXkU9Lm5zDB81B8cg+WKB9qv8Atgux9Htog65e8hBXIyVBLfD6alUV9/6G8Qut+IcVlAO5hswIEH6uvGpx86j+Y+y+0gtJZLGA/S00yxuzvI7PGwfHibGW0kbAZJFA/cDsxDbwxL0jiRB/VUDJ9TtW9S7y5zfa3SQ6HVGmjDxoxALADxBPJihyrAbgqfLBLFQFVP268di7j6GCDJgyMPsroYLn5nJ/qirWkbAJ9Pv/ACHWudeL8GbiHFZF1H65+8lckfV2qYyzEbLhVCD3JG+NTBZHJd0F4nc63CtNaWkrAkAmTu2U7HqcYz91WJmqm4LyVaca+kX91G4WaXTa6WZCLaJRGraTt4tJOCDW1/5OeIWe/DOLSqB0iufrE+WcEL9yUFoUVWI554pYf+luHFoh1ubXxqB6smTgddyV6dKdeXOaLS/TXazpJgZKg4df2kPiX8KCZooooCiiigKKKKAooooCiiigKKKKAooooCiitTivEobaJ5p5BHGgyzN0H/EnoANyaDaZgBk7AdflSJe86zXcjW/B4lnKnTJdPtbRH2I3lbpsu2461qR2t1xw65u8teG/oQ50zXQ+1KRukZ8lG5z8jTpNALS1cWsA+qiYxQoNILKpIUAep2++gX+D9n0KyC4vpGv7n+cnA0IfSKL4UGR7+2K2+0Lm5eFWonMRkLOI0QHSNRBPibBwAFPl6VAdkfOF/wAQ+kC8hCiMjS4jZBqOcpg9SMA+ozv1pv5luLPu+7vFSRX6RMnes5G/giALORjOwOKDy5J5kXiNnHdKhj15BUnOGVipwcDUMjY4H3VOUtWn0tlEdrbRWUCjCmUBnAB6LbxEKoI8zJnfda87/gMKI01/eTyogLMXlMMQHoY4NCsP2tR+dAidpXA7ez7yUNG1vJJ3ktuJVjmimPWeyJ6P5smCDj91n5X5ha2QR3t2pjGNEt0ptpQp3AdmzFPgEeNH39zSo8K8RP0awsYbW1kAZmEapcTRah49h9RE2PjbLMPhVtxVv8Pte7jCEgnzwMDc5wB5AdAPQCgXeL8yWk8Zjgu4pC2zdxm6fB9I4dROffb1pG4PZx3009nGfo1skum8aSVPpl3Im3dnSfq4h0OPkN9WLfmTwMAPIj8qpK4uvol1Kr2kNzHNLmS3mRNRmOAzW8jjGtwNXdtjJ+Hrigu62gSNFRFCoqhVVRgBQMAADoAK0uZOLrZ2s1yylliQuVXqceXtv5+VLvLtjY3cIn4fNPb9UKxSMnduOqPbyaolYehT5bVJTx30alWEV7EQQVIEMpXG4wcxSk+h7sb0Ed2a88rxaKV+5MLRMFZdWtSGGQQ2BnocjG23rRzH2b2dy/fRarS5Bys9udDavVgNm9+h96kuW7qyj/g8ES2r7sbcxiF/LLBekgGwLoWHvUL2t80XnD7eOSziDFpNLuULhBjbYH9I7ZO23qRQaMfNV/wohOLx99bZwt9CvTOw7+MbqfcD5aqsGxvY5kWSJ1dGGVZSGBHsRUdyzdSXVlDJdQhJJYwZIypxkjcFW6A9cH1xSlxDle54XI11wga4idU1gzHQw82gJ+B/b8M4C0FjUVDcrcy2/EIe9gY7HS6MMPG/mjr5EfgfKpmgKKKKAooooCiiigKKKKAoooNBq8Sv4reJ5pnCRopZmPQAf2/LzpG4TwuXi8y318hS1Q6rO0bz9J5x+kxHRegB+Zb6RP8APVzrO/DbaTwr+jdXCHdz9qFDsB0Y56jamrgvM1nds6W1xHK0fxhDnHv7j3G1Al889pz8Pv4rRbXvFYIzNkhiHYjESgYOMfedtsVZLuACScAbknYAepqvef8Ai1/HLqgtbZY4lBW5ucOWkYfxcCg6g3qTtsxJAGa8eFzcQeW3Xiwia3lDlQmY/GilwbmNuqaEJAJwCRqGcAA1f5wmu9rQiOE/+ssuS3/N422YdcSt4emFcGt/hfBYYCWRSZG+OVyXkfz8TtuQCThegzsAK9IuK27CMrNGwkYrGVZSHYAkhCD4iArbD0NaXMPMC24VEAluJHWOOEMAzM2+W6lUChmLY2CmgmqpTtc5nD3Bh2MNsVGhvglumXUDIP0o4lwxXoWZQdjs+doHMpgsbl7WaPv4yiHBVzGZJFTLL5EAkgHzFc88e4rEs00b2/0h1nk1SXEshLOW0s2mEx6c6BsScYxQdGdnXC0hs45Ml5Zx3s0pOWdz5sfYbBRsMYGepaKrnsxsIbuySSaBRsAqrJMUC6RgBXkbAHTFNp5TsD1tIT80U/20EzVM8+zQ3FzPHgYHhbOMYDaCX9gwLZ6hY5DnKppiO2K4FjOqWiRRA4yot4COmcgtGT+dV5HzRLvrit3znOYEUnOc5MWnrqb94+tA/ci8xvbubpmYdzKlvfh+rwyMVinfy72JgUY7kjG+SSeghXJVtzZGFnVrNVFwumUwzSozjOd++Mq5zvnT1q7uz7mSeSyu2Mgl7gAwPOVjOh4FkVZmXwjTqwW9KB94lw2G4XRNGrrnIyNwR0ZT1Vh5MMEVCst1ZDK67u3HVTvcxj9U9LhR6HD4HVztSbwrme6jU3ks89zAiN3h7qOOGSZiFjiswE7yU6zjvMlceuaneA3fEBfRrd3CEywvI9pGi6bdAVCMZPiZyxK77Hx4+Ggb+G8RiuIxJC4dD5j1GxBB3VgdiDuD1pA4R2nPPxh+Gm10oHeMPk6wYwx1suMaTp+7UNzWxyzNcXE17eW8kIgaRUjPdBVm7pvrJCwOpvD9WJCcErnAAxWr2em5vZkv2uwV0lZkSGBAZcD6pXUGRo0z8RbxeHGxzQSXNnLM0U3+cuGYW6A+uh6JdRj9Fh5SejUw8qcxw39uJoSRvpkRtnjkHVHHkR+exr047zFaWYU3U6QhzhdR3JHXAG+BkZPQZGaTearRuHT/AOeLMa4XA+nQpuJI/K4TG2tc5J6Eb7ZYkLHorXsL2OaNJYmDo6hlYdCpGQa2KAooooCiiigKKKKApP53vJJnj4ZbuUluQTK6neK1Bw7j0ZvgX3J9Karu4WNGkdgqopZiegVRkk/ICq55C5osW7++uby3jnupMhJJ4w0VuhKxRkFvCcAsfUvQWDZcOiihWCNAsapoVR5LjGP++lHkbs1tuFzyzxyyOzqUXXgBIywYjb4jlV39qmv9NuGf+8LT/pEX/ar4fikN/wDU200c0XWd4nVwE/msqThn6H9UP0JWgh76wvb25S7tpLcW6Lph79HffO88aoyghtgCx6ICNm3+uNckyzorPcmecSIWMn1cfdKwZoY1jH1SswRifEzFFDEgDDuqgDA2FQ5vJJJ3jjcKIwM5XVliAd9xt4gNvNW+4FmDke4W4jfvoRFExeLTE3eROUKsE1OQyku7lmyWdgW1YArx4V2fXED94tzH3rW7xNMIfrO8c5MoLMSzthdTOW6EKFBwHzht13sUcmMa0VsftKD/AI1s0FcXvIEx4bLbRmJZnSIDGoqzQurjXI/iwcNgAALrY4JJNKXBeQ4uI/SLg2yxuLqWORDLJL9Ypy2NLxjGWON6vSkDsxuMC9UnA/zhct/v/wDdQePCuHX1hH3Vrb+D9WGM9B1zNxHNQVz2pzoxU6iVODi3hYZ9mW9IPzBrT7Q+fWui1vbMVtwcMw6y/f5R+3n8tqQa6OHQ8q736a7X9jTx7myG9IN1bd6R0LQAY+Wm8FR3DOE2V1KsUNg5dvJY3wB5lv4fgAetbvKXJdzfkMo7uHO8rDY+yD9M/l71dvLPLVvYx6IU3Pxu27uf1j/gNhWvPjw4+o3mWazMqn432Vw29tNcyRKVijaQqryoxCjOATJIBTTy5yS1zZzrdDuFuZYpo0hkDmNIkQICzrpYnRuCCOnn0me0u5xw+8T1t5P7lMXAv5NB/RJ/cFUk0MnJMQheJri6kLOkglkl7x0eJtSFNQ0KFO+NOD5g1t2PK0MUcyq0hkuARNOzZmclSoOrGF0gnSoAVfICpyoq34g30uS3fGO6WSP1IyVfPyOn96g8ByxF9AWwDMIliWPUukMQuNyCCp1EeIEEHUQRg1G8R5fmtkE9k7POjtJIrlQLkMqK6MFARW0xRhCAApQDoTTdRQV/zNypa8fht5xNJHp1YKgZAJAeN1b4XVlx7EHrTpw/h0cMEdui/VxxiNQ3i8CrpAOeuwqBnC2F20xYJa3R+t1EKsdyBtJk7KsgGlv11TzY1vjm/h3/ALfa/wDSIv8AtUCrytnhV+3DXJ+i3GqaxJ/RbOZIM+2dQ/4tVi0gdoF3YXtqRFf2q3ETCa2cTxZWZN1wdXn0+/2pk5N4+t/Zw3K7F18a/ZkGzL9zA/digm6KKKAooooCiiigrHt95g+j8PECHD3LaD690uC5+86F+TGua6sjt74wZuKNED4beNYwPLUw1sfn4gP6tVvQZRCSAASTsAN8n0rrns45YHDrGKHA7wjXMfWVsZ38wuyj2UVQHYtwL6XxSIsMxwDv29MqQEH75U49FNdT0HzI4UEk4AGSfYUncInf6PdT9HkbRHn7bE4U/KWZk/qVO8zSnuTGo1NIdAHqDuw9sqCufVhWvHZANBbA5EY76Q+rZOkn3aQtJ846CatoQiKi9FUKPkBgV8Xt2kSF5GCqoySa1eOcags4jLPIEQDqepPoB5mube0LtEuOJyd1FqSDOFjXq5Ow1Y3OfTz/ACAXRwbtRtLm5SBFkxI5jjl0nQ7gAlQcYyARnfzHqKrXiPGWhiu4UJBnvrkE/wCzEh1DPlnUo+RNNvZD2ataBbq8H1+5jiO4iDDBYjp3hG3sPekPiNlJPd9zEup3vbwKP/mjcnyA6k+VbtPt/JG/hi3hF28DSMqIpZ2OFVRkk+gAq1+Tey5VxLfYduohG6D+kP6Z9ht86Z+SeTIbBM7POw8chH+6n2V/M+fs01Z1Gsm3006j3QrT3fEcYUAAAAbAAYAHsK+iaw7AAk9BvVdc39oYXMVmQzdDL1Vf2PtH36fOuda0VjeVvBp8me3Gkfhp9q/HUHfWq7u1tKWx0Udy5Gfc6enoflTlHfSwW9tIEDwiJO9xs6+BcOPIqN8g4xnOcA1z7fSkvIWJJMMxJJySTA+5J6muleCD+DQf0Sf3BWKW5Runq8EYb8IbNrdJIupDkefkQfQg7g+xpa5klMN3bz/o6o43/o3MiH7tcsJ/qivviNm1oxlj1dyOukZaIfs/6yH9Q7pk6SB0heeeJK9o8h3UQswdDlG0SRSDS3k2I28Bw2x64zU1VYVFaXBb0TwRSg51orem5G4x5YORW7QafGOGx3MEkEoykiFGHsR1HoR1B9RXHXMPCJLO5ltpfiicqT6jyYezAhvvrtGqD/yjOAaZoL1RtIO6k/bXJU/MqSP6goKZq6v8nLj5Ek9k52Yd9H+0MK4+8FD/AFTVK1O8i8W+icQtrjOAko1H9RvA/wDus1B2LRRRQFFFFAVhjtWajOZ7rurO5l6aIJG/BCaDkHmPiH0m6uJ857yV3HyZiR+WKjqKBQdBf5OHCgtrcXJG8kojB/VjXO39Zz+7VwUldjll3XCLUebK0h/ruzD8iB91ONxIVUsATgE4HU4HQe9AqceuJG4hbwKSquCCRjOgI7yDcHzFqPkxqN5t58s+FKyqxnuG/R1ajkDA1t5AYxj55wSTSlx+64nxK5/gVs0DqZEEkpMeIyI1dlyeh0x+RO4IAzW/y32IRBhLxGc3D9SiEqmf1nPjf8qCs55eJ8wXPhVpMHp8MUQ926L/AGn3NXX2d9l9vw7EsmJ7n+cI8Ke0QPT9rr8ulO3DuHxW8YjgjWNB0VAFA+4f21tUBVQ9nSj/ADlOcDIuLvB8wDMcj79K/hVvVT3Zy3/nWcf7e6P/ANZqC3yaiOYOYYLRNUz4J+FBuzfIf4nYVC8687LaAxRYecjp+inu/qfRf/BqG9vJJnMkrl3PUn/xsPatOTLFeo8urofTLZ/rv1X/AGU5zRzjcXmVz3cPlGp6/tn9L5dP7aXK9LeB5GCIpZmOAqjJP3CrS5M5AERWa7AaQbrH1VD5FvtN+Q9+tV4rbJLt5c2DRY9o6+I8z++6tOK8IaCCV5VKvJBIVU9QhjOCfME77emKv/gX8mg/ok/uCqp7ZWxI4/2D/wDUtVrcC/k0H9En9wVdrXjGzymbLOW83n7t0ikfmnh0dmskqRs8coKyQLhlYhGcnu38DjCHw7H0z8JeaXOZMPNbqThEkV5D5AnVoyemDpdf6y+tZamtw6G5toES3gZUA1LE5jZkLHUULGTwrkkbFyPInAFSK8eOnJgc4+ILuVx1yGCkeu4GR0zU0DS/emW2uGmCGSGUDvAuNSOo0hhkgacdfvORgBgmbC9jmRZImDI3Qj2OCCOoIIIIO4INKHbLwv6Rwm4GPFEBMvt3Zy3+5r/GpjlYpque7I0mUHSCCAzRq+RgkYKsnTbOalOLWgmgliIyJI2Qg+jKR/jQcUUVk1ig7I5K4gbiwtZj1eFC37WkBvzBqapC7DrkvweAE5KNIn3CRiB+BFPtAUUUUBS32kNjhd7/AM3f81Ipkpc7Rkzwu9H/ACaQ/ghP+FByBRRRQdhdnyY4ZYj/AJLEfxjB/wAanpDgZAz7f/2oDs8k1cLsT/yaIfggH+FMNBE8ItX1vNIMM/Qegz+PQIvv3YOBnAlqKKAorBYVFX/M1lB/HXcEZ9GlQH8Cc0EtXPnC+Nm0vruRRlu9uVT0DNO2CfYYJq0rjtP4Sp0/S1cnyjSST+4pqgb/AIvGbyVhr8U0zAaGDYkmJXIOCCQR+NRtvt03aeKTlrz8b9pmWRmYsxLMxySepJ6k1O8scpXF6cqNEXnIw2+Sj9I/l718cucMk167jhd/Io3VFiVFb9ou4OPYdfyqyIua7hQAnBbwADAH1CgD0A7zaq9MO/dnc1fq1aRwwd/P2/pM8u8s29muIlyxHikbd2+Z8h7Dapqk/wD0xuh14Ne/d3J//JXjPz9IgOrhHEgQNsQKwz6ZRzj8KsxG3UPP3va88rTvJN7Z2+ub+hk/6g/8atvgX8mg/ok/uCudebOJ3d1LLPc208ZaN1VTBKoUGJlVcld92G59fIbC4eAdovCjDEhvY1ZY1VhJqjIIUAg6wPOtl6xXbad0IO9LAMf0yeG4VdMiq0Rbow06XAJ2B8K7dSF9ql7DjdrP/E3MMv7EiN/dNe95ZRyjEihvTPUfIjcVBlC8md8ElV31xpMyQHz7pRtk+Y3wOuwpjrzt4VRQqgADoAMD/wAedelBF/6P2/fCcIRIDnKs6gnOd1UhW3JO48z6mpSiig4p4zFpuJl+zK4/ByK062+LTa55X+1IzfixNalB0n/k8uTwth6XLgfuIf8AGrPqsv8AJ7iI4WSf0rhyP3UH/wBpqzaAooooCtDj1r3ttPFjOuF0/eQj/Gt+sGg4eopj41y3MeIXNrbxPKUmdQsal/DrOk+HoMY69KbeWexa8nP8IlitwPiXUJZR6ZVDpGfdvuoLV7GuJq3BrdnYDutcbEkADS7YyT+qVrfu+0fh6sY4ZHupMZ7u0jacn70Gn86juBdknDrdQsgkucHUBM5MYbGCREuE/EGnaysYoVCRRpGg2CooUAfJdqBTPHeLz5+jcNSBSNpLyYD8YocsPvNZHLvFJv5TxUxg9UtIEjx8pJNTfkKc6h+J8yQQv3WWkmIyIYVMkmPVlX4F/WcqPeghB2Z2LY+kNc3RG+bi5lff3AYA/hUtY8m8OhwY7G3Ujoe6Qt+8QTUbxPntbUK95ZXNvETgyN3EgXJxl1hldwMkDOOpA86a7eZXVXRgysAysDkFSMgg+YIoE3n/AIgsBtLfX9Gt7iYrPMng0oiFu7DL8DSEBcjfGcUi8X46s/era25XhluBBjHcQtdSYXVdg4fukLDK6Tk4Ldasi/suKGW4EVxCIZdPcu4Je3wuG0xqoEhJ8QLSDB8qhV7OHFuth9KX6F3veSDuj383i16ZJdendgPEFBwFHlkh98O5mg4bDbWJEt1LGY7RmiVSvflc6Muy/CNzjOkY1YJAr3v+0m3QXWiKRvo/gVvDpmmYgJFFhi7MSc7Lsu/QjKiOVYX4nHw9rieVo4pZZSqRqixzvqYFslxI4YIz9SrrjTTVbdmEEYTRPIHjnaaJ9MZ7vUCNKKV07ZBDHJzGnkoFAvcrc729jBJHMksvEJLiRriNSjM02lS2ghiAigrGFBzlG22JDW3aHbmWKOGKSYSuY0kUoEJQZkYFmGqOMfFIPDnYE7487bs0tI3Zo5JVSSIRSx5Q95gk6ncrrJYsSwDAN0ORtWpb9lVsrRl7ieRUiWExsYwrRq2oKdKAhc4JAI1Y8WcnIbTdpdriYrFMwjkWFGUR4nlcjSsGXy5wwbcDAwT1GfmPmmyQRW8jSXzGTuO97qOQPMRqK5GFbSCMlQVXYEg1D8r8hcPnSKW3vZZ0g72HUMAEufFg6Rj4j413YN8WMV9S8l23C0W8ubp5ILW37sRaEQbtuEwQMyEgMDuxJBbSStA13nIfC5gddhb79SsaofxTBqPHZtbRgC1ub21x0ENzJp/dk1Aj2pl4FxNbq3juEV0SRdSiQBW0noSAT1G/XoRW/QJbcH4zBnuOIxXA8lu4MfcZISCfvFB5k4pBvdcKMigbvZzLKfuifS/9tOlFAq2PaJw6R+7ef6PJtmO5VoGGf6QAH7jUzxviSxWk1wGBVIXkyDkYVCdsdele9/w6GddE0SSr9mRVcfgwpP4p2WWUiOtu01oJAQ4glYRsCMYaJiVI9gBQcsGirS5i7Er6De3eO5XyAIik/dc6fwb7qrvifCJ7d9E8MkT+SujKT8s9R7ig6b7FLUx8Hts9X1v9zSNj8sU81F8r8O+jWdvB5xQoh+YUA/nmpSgKKKKApN7U+Ova2irHJ3T3EqwCX+aVgWeTqPhRWx55IpypM7V+Vm4hYlIxmWJxNGp6Oyggof2gxA98UCxyzbhlEcaCC3RQ7o7FY0VwCrXjKQ1zcyAhjFqCIrDVk6c2fw21WONVUAADbSoQfcqgAfKqd7L+N95KqSI8jF3aJNIVPpZw9w7/AGe7V41VmBIGsLk4FXWKDNFFFApdofH5beOGC2wLq7kEMJOMJn4pSD10gj7yKLhbfgnD5ZQCxRdbu5zJPMdgZHO5ZmIHsDtsK8u0Hle4u3tLm0eNbi0kLosue7cNp1BioJHwD8T0qv8AtNS8uZ7Th00ytNcyK7xQZ7qGJSQMBvE5/jHZ2xtGMAAbh4wXZl4dLn+GcW4mu6JhzFAW8IbG0MYXxAHG7L6ZFpcFkj4ZY2tvcyZkSIJhFZ2ZkXLaEUFmC77gbAZOKT+2GGHh9tbXFoiwXKTqsTRqFZl0ksj6cF0OBkHrt60v3/NLfQbvij/ym91W9onUw2qtoZh9nxHc9C+j1oLOi5+sXtp7uN2eGB9DMqHxOceGMHBc+JfxFeUPP1s9lPfqsgghyAzqE71gBtHk53YhMnG+fSqy4tdvY8Mhjtn0xRuLcTj4Wu5VYzTK3UrEuuNSD8TN/NipLmiGIrw62kl7nhpk0kMwQGKBCytKDurTsXO++Ah2YkUHt2Y8XMEySXcLi44s0kyzFl0iOMalXSTqWPByCfUbYGan+YO0wQ2z3kEKy26yd0jvIYzPJnB7hQrZRcMSxxnScDzquudeKRXZnvjcxRoFW2tYFdDMLZ20yzdznKlkZgFwDpffGkGvrjvMdtJeWAXu/oVvHm2gE0YHeqcIbpg2IhkKxBydIIxqZgAsfmHny5s7eCRrHvJnVWmiWUL3XeEiNMkEs7HIChT8D+grc5l5zls4LbVaiS8uWCLapLuCevj07hcqCcAZPXG9VqvGohxdNd1BOqRmZZmljWA3kgAMz5YbRr4FjGWAij9S1bvK9xHLxO6la4QtGTDbzvLCVWM5LzRkt45pNRIwNKmRs7AKQs6XikFoyWltAGmYFxBAFVVUneSRtljTJO53bfAJpBg4g3Md3FH3TR2FqddwGKkSzgkLGGXZlx+RbplaipZrmPhUqcPtZu/l0/TJSja9yE7m3XdnVFwuseEKCQSx22+LcNls7CztY2ktbeaURSyaWEjB1zJLKq5Ks3wJGc4Hxb4CBYV7z3Ywo762aGJhHJLGhaJHOwTUPiPQYTVjIzipnhnGIp7dblCRE66gzgp4ftENjAPXJ8sGqbukW+vouGiBobGyVZEtSMS3DEAqWU/CCGyzN8ILasM2BO8U43FpkuuIOrw27vHb2UXSWWFiGkdOrKjDSuoaQE1kAkCgn+bu0O2gti9pLFczyN3UEcbiTMxxjIQ9BkHHnkDzrb7OeV3sbdjPK0tzO3ezsTkBzk6VHTAyd/Mk+WAK35VlWFpuOX6B55MSogwBBA2FVycbO4wkandtj0LMshJecXvYDcSGS0WUjusOY0ijZttKRnvrqdhsqkBfF7+ELkorztwQqgkk4GSepOOpx516UHjdW6yKVZVYHyZQw+8HrVd8yWJUaCsc0EjaAjMWtnk6CIhyzWUp+FHRimrZgCVqyqq/tT4hHEGXDxtIAtxhAUe1Yhe/BzjXE5jAPxKT0KkGg3+ybjplE9prd0g0NC0n8YIZAfqpd/4yJlZD8qsKqw7EuCSrHNxCdQj3mkqoGPAoPjx5a2JbHpj1qz6AooooCilbjPPMEUpt4Eku7kbdzANRU/7V/hjHrk5HpS9xHhfGb46ZnFvGf9TDIUQDbaa4A7yRsZ8EYCnoXWgRe0yKGy4us1sYnMp71ohobRMp8YddQ0pIu5GQW3FXpwfiKTRqysTlQ3iXQxU9HKHxIGwSAQDVAc9chzWcQkCKUjIYYVdBx9pCcknDeHMzYGWZRtTJytxVktlxKkMcaLJJLIWKKGACzXADap7iUAFINWlE0ZydIoLqozVXDi9zLG0lrZXFyApP0jiEghiIG4ZLdcAj0IVfc1UfMvaJxG4JSW5ZQGI7uEiOPbIxmI5cfNiKC3peabrht1eC9mjljd9drqngjEaeLwsgJm80BwjfDnzqG4ZI0ss13HbX91eTYK3EUYtoYlHwpA1z1XAAOpTqHUbnKj2Oc32tpcGO7hixKw0XBRdcbnAwzkZ7s7b52O52JI6WyDQVBByTxi5uUu7p4Ncf8V9IbvzF5grFAscWrzyc9B6A1IWPZFiOWOW+fRMcypDBDEGwcgeIOQATkDoD0FOHL3F9bNEV0smp31bEFm1jY9Bh81Pg0CRD2VcO0LHKJ51TAVZbiUqAOgCqyqB7YqsuB8iR3d08UcapEl1cLI+kHTFHKAqjOctg4Gfc74roWkbstj8F8f8A4jcj/fH/ABqVbcZ3JTdpyZw6NVVbG28IwCYY2bbzLFck+5rdj4Far8NtCPlEg/sFbzGkHm3tDSLMVriSToZOqKfb7Z/L59Kha0R3Ldg0+TNbjSN0zzGeG2yariC3P2V7mNmY+ijH59Kp3mG7guXylnbQRj4VSGIH5uwXJPt0/trwvbuSZzJK5dz1Zjk/9w9qzYWMk8ixxIXdugH9pPkPeql8s2naHo9L6biwV5ZO5+fENW24FE0dxIIV+qt5JAwGNLhCUO3nkflVv8M5AgMETxXN7bs0asTDdygZKg9HLDr5YxWpxbllLLg14M6pDbyM7ep0EYH6o3x9586eOBfyaD+iT+4Ks44mK9uDrctMmWZxxtBXPK3Eo21QcXc+RW4t4pcj0Lrpao244ZxGLvjJwzh14JhiVoD9HllU9dfeAhj/AFqsdmA61AHi+u8EKocxvpcjcBXhZwT6boo38yKmqEjifEeHmyewveHXfD7fAJZYdUakEEMJYgwJBA3IPvTTyhJYyaGiv/psiLhGkkRnQYx4Y0ChCRsW06iNiTTbVDduXHOHq30eC3ha7BBkmVQrR43ChkwS58850j3OwXzRXKfAO03iVrgJcsyj9CX65fl4zrUfJqtjh3Nl1JCtxc2N7AGH8daM0ijzy1vKDgfraWHvQWhNKFGT+A3J2zgAbk7dK594qy8T42kEkiLAz7tlog0UerUFDvkNI4ZWQDOqMHyNOV7x15ow4lS7hlYIrKSiSSdVhmRjqs7nYaJVIUvjKrlarPlblyXiFxK6DWNQDllBLHqWkDajrJ1ZZlVWYN41NB09EgUAKMAbADYADyFfdVbwzl/i9hpFtLlMD6qUtNB5eEgsZrY9fgaROpLAVP23PyRMIuJQSWMh2DSeO3Y/qTr4fL9LFA50VrfTov5xP3l/40UC3xnkpWla6spWs7o7s8YzHL7TxfC/U77HzzWvYc5PbutvxaIW0rHSk6km1mOP0XP8W3Xwv+O9Ota9/ZRzI0cqLIjDDK4DAj3BoPjiFnHPE8Uih43XSwO4INc8Lw9lisLRwXUTXXfgKz654X7vDKhEjaYgoGg6lDZAOnFW32d2vcy39vG7m2gnWOBHYv3eIVZ1Vm306n2BO2PnnS5r5MlMkslvDDcwzOJZLeR2hZbhRjv7eZN0YgDUPPHvQNXArlZYAuokhdJP1jeX2pkBZvmPnXMXaVwwwX0vgZVdtQLF2yejYd4o9W+/hBAzjJq4Dy5dxxvLcSixiAwRDO090wO2n6VdNphBOPgwPWqb5p4NIssj4fSDqIcsSis2ldRfxZb3676dQGqgWKtjsq7VjaBbW9Ja3G0cm5aIfZPm0f5r5ZGwqeig6443woXC/S7OQF2hcL3ZBWYMvhGrONyANXp7VLcP4ykgxgqQ/d4Prp1D7sfnXLvJPP8AecMbETB4SctC+Sh9SuN0b3H3g1d3LvOnDeJvG0cgtroMpaOTAL4ZSQpyFkJEeAeoHl5UDL2hcbksrCa4hCmRdCpq3ALyKmSPPGrOPaqr4Hz9Fw76RbG5Mjm5lkkkNuY8yM2GxpaQacqSPCOtWl2i8GlvOHzQQ4MhKMoY4BKSK+nPlnTjPvXO3HOX1ae4Lyvbzd4zPDNA50l/HjXAX1DDZB0jIBPrQXBbXF9xW3JgljaFtji4MRIx0I+hE49Rmo3/AMml59iH/pbH/wDTFS3ZfexWdkscr+4ZILkKRjGdTxLvkU4/6U2fncIPnkf2iozSs+W/FqcuKNqW2U1zBwdLEhbuSKMnoPpExz8itiwrw4Nzxb2me5nUatyQ7MT7ZfhoOPbNb/a7w48QmV7WSNwoG5lQDp5DOc59qru45Nnjx3ssEeehZ2OcYzjQhz1HT1FIpWPEM5NVmyRxvaZhYnHO1WG4tZrdpTiWNoywiaQgMMZGe6GasHsy4vLLFNFLIs30dkSOVU7vXE0KOpZMkAgN61zzacv27Kxa91lcZW3t5ZD4mCqAZu6GSWAHWr+7MeXp7a3uO8jMHesoiR2V3VI4ViVpCm2o6dWkdKkrprivFu9EcUKszyGCQbgYRnZ8nJ8lgfb5YzW3y7wUWqNqfvJXYvLIRgsxAGwJOlcAbexPmahOJ8f4dwaMCeVe90KNK+KZwoOBpG4XJbGSFGo1SXP3atd8Q1RR/wAHtjtoU+Nx/tHHl+qMDffPWgeu1HtdWLXa8PYNJ8Mk4OVT1ER/Sb9boPLJ6UK7kkkkkk5JJycn1PnXzmig3OE2nezJGejMAdwvhzudTbDbO5rrbgqQ2dlHhkRAmQXMMa5IyNTQqI9/tAb+9cp8CtbguGgZ0boHTUDnGdOU8RJA6DJ2O2xxeHDbDiEtuj21092i/FFNK8EytjcRXcLFZBnHhcsBjfegWLmRTxCbxq0F5bz/AEh43aVD3UTSCYSaERnRlX4F0rgDJLGrV7LeFCDhtuTnXMgnkLEkl5fFk56HBA+6lK05Su7l2WS1ktklAS5uLm6FzO0IbUYING0asQAW22zscCnHtFmlg4XcNbOYmjRSCmNSxh11aM9Do1AHyoPvmTnCO3cW0MbXV4wylvFjI/WlY+GJNxufXpUfa8nTXbCbi8glIOUtI8i2j9NQO8ze7bbnY1Pcscv2tnFptkxr8TSE6pJCd9Ujndic59N9sVM0Gt9Bj+wn7q/8KK2aKArBrNfE74UnrgE7UFY8FYi2e6RS7PxG4mwBI+QJCnwIyxnCxgB5WCIcHrTA3PUfdiQIAn6UryLHbr6ATMPrj0/ilcZ2z50o8nRcSnsLe1is1gRQWkuLxc5kaRnJjtv0yCchn2py4VyDbI4mui17cfztzh9PniOP4IwD0AG3rQRF/wAyzcQVU4fayzL53DFrWDcdUkI75h/R6Tv1rZ4FyAQ6y3skcuglo7eKMR2yOwwXKnLTSbt43JPiPtT0Bis0FBdpvY+8Ze54cpaP4ntxksnqYvtL+r1HlnoKbZSDgjBHWu4aQ+fOy604jmRfqLg/61Bsx/2q9G+ex9/Kg5ZozTPzbyJfcOJ7+EmPOBMmWjP9bGV+TAGligcuWu03idlhUnMsY/1c31i/cSdSj2BxUpxjnZOJTpMbbu59GiRVbWsyDppVgPrBqYaTnWpZc7gGuayDQdWdmXMaXVusesFoxt4slk9TnxMR0JO5yC2GJAdK494ZzIyMHZpFkByJom0yZGd3B8Mp36+FvVquns9504pdhVWOGZCxAlkV4W0IBqd9Bdc6mVQB8R1dApNBbBNUt2iXpvbhlhAKoMGQtiMKp3ZnJ0qoOckeEbZJfSI3Dn3iXEbeyllVbXwjxKDKxKfpEHw5wMnHoDv5Gg+Nc3NKCMtJ5gOqpECBgHuFJEjAYAaRm+VBMW/G7WxkhcRmdI275QfqzPOAQszalJSGPJ7tcZJLMepr55k7X+JXQKo4toztiEYbHvIctn9nFIVxOzsWdizE5JO5NedB9yysxLMSzE5JJySfUk7mviipjl3li7vn0WsDSfaYbIv7Tnwr+OaCHqxuzfssn4gVmuA0Nr1DdHlHpGD0H6529M+Vj8idjNvalZr0rcTDcJv3SH5H+MPuQB7VairjpQInGuziLSpse7gZYxG0Tp3lvMgOQJkO5YEkiQeIZNR/DOKTcNcm/s5Ujxgzw5u4gBvkuR9IRfZy3tirMrBFArW3O9u66xmSH+eh+ujXPlKEHeQnzOpNIz1qIu7n/OH0hVDKklnJGuXfS2QQGTQWt7geYdWDr0I3qZ4xyHZzv3qI1tceU9s3cyZ9SV2f+sDUHDbcR4a7O1ul/Exy8luBBcnb4pYQe7nbAAyPFQM/Il4ZuHWkhOS1vHqP6wQA/mDU7Sb2SyE8NjXSyhJJUUOpVgombSCD0wpA+6nKgKKKKAorGaM0GaKxms5oCijNGaAoozRQfLoGBBAIOxB3BHvVfc0dj3DrrLRobWQ+cOAhPvGfD+7p+dWFms5oObOPdiHEYcmBo7lfLSe7f91/D+DGkXinLd5bZ7+1mjA6lo2C/vYwfxrsyig4eq7+yzneKzte4ePO7PCdUaawxBMeuQqmpW1ZUkHBUgHNXBf8vWc38dawSftxI35kVpR8lcNXUFsoAG+Je7XScdMr8JxnY42oKY5i49dzyTy3MyKWjdLe1jlRwishQzTGNmVFRXdsscs2nbAGKomxqOn4cnGfTyrr48lcN06PoUATOSojAUkebAbN99e9nyrYRHMVnbofVYYwfx05oOQ+H8IuJziCCWX+jjZ/7op24H2N8UuMF40t19ZXGceyJk59jiunVAAwBge1ZzQVbyz2IWUGGuna6ceR+rj6/ZUkn72x7VZljZRwoI4o1jRdgqKFUfIDavbNGaDNFYzWc0BRRmjNAUUZozQFFGaxmgzRWM1mg16zRRQZFZoooCiiigKKKKD5rIrNFAUUUUGGrFFFB8Vg0UUGDQKxRRJ9isiiiiLIr7FFFAUUUUBRRRQYNYoooMUUUUH/2Q==" alt="Logotipo">
+          </a>
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Alternar navegação">
+            <span class=""> </span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
+              <ul class="navbar-nav  ">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Início <span class="sr-only">(atual)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#about">Sobre</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#service">Serviços</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#gallery">Galeria</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link last-link" href="#contact">Contato</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- fim do cabeçalho -->
+    <!-- seção do slider / destaque -->
+    <section class=" slider_section ">
+      <div class="container-fluid">
+        <div class="detail-container">
+          <div class="detail_box">
+            <h1>
+              Bem-vindo à Barbearia
+            </h1>
+            <p>
+              Cortes profissionais e atendimento de qualidade.
+            </p>
+            <a href="#contact" class="">
+              Contate-nos
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- fim do slider -->
+  </div>
+
+  <!-- seção sobre -->
+  <section id="about" class="about_section layout_padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 ">
+          <div class="img-box ">
+            <img src="images/about-img.jpg" alt="Sobre nós" />
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-5">
+          <div class="detail-box">
+            <div class="heading_container">
+              <h2>
+                Sobre nós
+              </h2>
+            </div>
+            <p>
+              Oferecemos serviços de barbearia com profissionais experientes. Nosso objetivo é entregar um corte impecável com atenção aos detalhes e excelente atendimento.
+            </p>
+            <a href="#contact">
+              Contate-nos
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- fim da seção sobre -->
+
+
+  <!-- seção de serviços -->
+  <section id="service" class="service_section layout_padding-bottom">
+    <div class="container ">
+      <div class="service_container">
+        <div class="heading_container heading_center">
+          <h2>
+            Serviços
+          </h2>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="box">
+              <div class="img-box">
+                <img src="images/s1.jpg" alt="Corte de cabelo">
+              </div>
+              <div class="detail-box">
+                <h5>
+                  Corte de Cabelo
+                </h5>
+                <h6>
+                  Cortes modernos e clássicos, feitos sob medida para você.Por apenas <strong>35$</strong>
+                </h6>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="box">
+              <div class="img-box">
+                <img src="images/s2.jpg" alt="Barba">
+              </div>
+              <div class="detail-box">
+                <h5>
+                  Barbear
+                </h5>
+                <h6>
+                  Barbear profissional com toalhas quentes e produtos de qualidade.Por apenas <strong>30$</strong>
+                </h6>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-md-4">
+            <div class="box">
+              <div class="img-box">
+                <img src="images/s3.jpg" alt="Aparar barba">
+              </div>
+              <div class="detail-box">
+                <h5>
+                  Aparar Barba
+                </h5>
+                <h6>
+                  Ajustes e acabamento para manter sua barba no ponto. Por apenas <strong>39$</strong>.
+                </h6>
+              </div>
+            </div> 
+          </div>        
+    <section id="pacotes" class="pacotes_section layout_padding"></section>            
+    <div class="container">
+      <div class="heading_container heading_center">
+        <h2>
+          Nossos Pacotes
+        </h2>
+        <p>
+          Escolha o pacote que melhor se adapta a você.
+        </p>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="package_box">
+            <h3>Pacote Básico</h3>
+            <p>Corte de cabelo e lavagem.</p>
+            <span>R$ 50,00</span>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="package_box">
+            <h3>Pacote Completo</h3>
+            <p>Corte de cabelo, barba e lavagem.</p>
+            <span>R$ 80,00</span>
+          </div>
+        </div>
+          <div class="col-md-4">
+               <div class="package_box">
+               <h3>Pacote Premium</h3>
+               <p>Corte de cabelo, barba, lavagem e massagem.</p>
+               <span>R$ 120,00</span>
+
+           </div> 
+         </div>
+        </div>
+ </div>
+</div>
+  </section>
+  <!-- fim da seção de serviços -->
+
+
+  <!-- seção de horários -->
+
+  <section class="timing_section layout_padding">
+    <div class="container-fluid">
+      <div class="heading_container heading_center">
+        <h2>
+          Horário de Funcionamento
+        </h2>
+        <p>
+          Atendimento diário para melhor conveniência.
+        </p>
+      </div>
+      <div class="timing_container">
+        <div class="box">
+          <h4 class="day">
+            Domingo
+          </h4>
+          <h6 class="time">
+            10:00 - 22:00
+          </h6>
+        </div>
+        <div class="box">
+          <h4 class="day">
+            Segunda
+          </h4>
+          <h6 class="time">
+            10:00 - 22:00
+          </h6>
+        </div>
+        <div class="box">
+          <h4 class="day">
+            Terça
+          </h4>
+          <h6 class="time">
+            10:00 - 22:00
+          </h6>
+        </div>
+        <div class="box">
+          <h4 class="day">
+            Quarta
+          </h4>
+          <h6 class="time">
+            10:00 - 22:00
+          </h6>
+        </div>
+        <div class="box">
+          <h4 class="day">
+            Quinta
+          </h4>
+          <h6 class="time">
+            10:00 - 22:00
+          </h6>
+        </div>
+        <div class="box">
+          <h4 class="day">
+            Sexta
+          </h4>
+          <h6 class="time">
+            10:00 - 22:00
+          </h6>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- fim da seção de horários -->
+
+  <!-- seção galeria -->
+
+  <section class="gallery_section layout_padding" id="gallery">
+    <div class="container">
+      <div class="heading_container heading_center">
+        <h2>
+          Nossa Galeria
+        </h2>
+      </div>
+      <div class="gallery_container layout_padding2">
+        <div class="box-1">
+          <div class="img-box b-1">
+        <img src="https://lh3.googleusercontent.com/gps-cs-s/AG0ilSzUa3W4RN6eziGxkKDwoPYoPva531qhGCDjgI7J0d5ZtNC9G-9wZ605mxhZNF_sutIdTE5T4DPybqEid3o8TR96_1UrQpVfnpl1kIdrjJx1OiBblT3p26CiQ96m_mnFklnlkB3o=s1360-w1360-h1020-rw" alt="Galeria 1">
+            <div class="btn-box">
+              <a href="OeKBfOGNxPGqjj1OnXkyh00DwNLbXSO8M15Qdm9V1b5jbZVZDp9yd_1P9RS6CmYRMpKNsOM9TbKmN0qCKh1O1fG3JNWfCRYm5qeOdDrb_zs43kgedWuquFbKgHvO5oX22g" data-toggle="lightbox" class="btn-1">
+                <i class="fa fa-picture-o" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+          <div class="img-box b-2">
+            <img src="https://lh3.googleusercontent.com/gps-cs-s/AG0ilSxgrn890m3W31R7sudOkA_vyK1-NCcUF8YntqhaT5XW10j-uFj41lNwY8VwWixlRLKB3PWXy2kfs_MaQcXzlGLDflLg_gHr5ex322ZBOmejArjbYsmqygE1ho8KagyJRJSHjKanZA=s1360-w1360-h1020-rw" alt="Galeria 2">
+            <div class="btn-box">
+              <a href="https://lh3.googleusercontent.com/gps-cs-s/AG0ilSw8Q0MAW6cZXV1u3VfIPJq1nYSUqGLRtq3T39cjtpmQY-xYW8cv1Q-r2DK5pkza0l4Lg2sXaaMbbUrexntJZa3O-NaZbEj_IX_ubW5anai7IK7A0frOk3kNnqAlbdhdfNyptUug=s1360-w1360-h1020-rw" data-toggle="lightbox" class="btn-1">
+                <i class="fa fa-picture-o" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="box-2">
+          <div class="box-2-top">
+            <div class="img-box b-3">
+              <img src="https://lh3.googleusercontent.com/gps-cs-s/AG0ilSw8Q0MAW6cZXV1u3VfIPJq1nYSUqGLRtq3T39cjtpmQY-xYW8cv1Q-r2DK5pkza0l4Lg2sXaaMbbUrexntJZa3O-NaZbEj_IX_ubW5anai7IK7A0frOk3kNnqAlbdhdfNyptUug=s1360-w1360-h1020-rw" alt="Galeria 3">
+              <div class="btn-box">
+                <a href="https://lh3.googleusercontent.com/gps-cs-s/AG0ilSw8Q0MAW6cZXV1u3VfIPJq1nYSUqGLRtq3T39cjtpmQY-xYW8cv1Q-r2DK5pkza0l4Lg2sXaaMbbUrexntJZa3O-NaZbEj_IX_ubW5anai7IK7A0frOk3kNnqAlbdhdfNyptUug=s1360-w1360-h1020-rw" data-toggle="lightbox" class="btn-1">
+                  <i class="fa fa-picture-o" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="box-2-top2">
+            <div class="img-box b-4">
+              <img src="https://lh3.googleusercontent.com/gps-cs-s/AG0ilSw8Q0MAW6cZXV1u3VfIPJq1nYSUqGLRtq3T39cjtpmQY-xYW8cv1Q-r2DK5pkza0l4Lg2sXaaMbbUrexntJZa3O-NaZbEj_IX_ubW5anai7IK7A0frOk3kNnqAlbdhdfNyptUug=s1360-w1360-h1020-rw" alt="Galeria 4">
+              <div class="btn-box">
+                <a href="https://lh3.googleusercontent.com/gps-cs-s/AG0ilSw8Q0MAW6cZXV1u3VfIPJq1nYSUqGLRtq3T39cjtpmQY-xYW8cv1Q-r2DK5pkza0l4Lg2sXaaMbbUrexntJZa3O-NaZbEj_IX_ubW5anai7IK7A0frOk3kNnqAlbdhdfNyptUug=s1360-w1360-h1020-rw" data-toggle="lightbox" class="btn-1">
+                  <i class="fa fa-picture-o" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="box-2-btm">
+            <div class="img-box b-5">
+              <img src="https://lh3.googleusercontent.com/gps-cs-s/AG0ilSwGIk6XaLra8cMY7HjaCHXk_PtXaRkvpz7VW6OW2hsibFSrsRccXkYWWb3iBwfbUW_lnU3LWBPWcDe_DKkL7dCKt5GY-h6Pw2NpbNVb9jQXYFERTiGz_OWpdSrM0yflJRVDJuFC=s1360-w1360-h1020-rw" alt="Galeria 5">
+              <div class="btn-box">
+                <a href="https://lh3.googleusercontent.com/gps-cs-s/AG0ilSwGIk6XaLra8cMY7HjaCHXk_PtXaRkvpz7VW6OW2hsibFSrsRccXkYWWb3iBwfbUW_lnU3LWBPWcDe_DKkL7dCKt5GY-h6Pw2NpbNVb9jQXYFERTiGz_OWpdSrM0yflJRVDJuFC=s1360-w1360-h1020-rw" data-toggle="lightbox" class="btn-1">
+                  <i class="fa fa-picture-o" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+            <div class="img-box b-6">
+              <img src="https://lh3.googleusercontent.com/gps-cs-s/AG0ilSw5t0s0J-Bqx0-Bz5ptfpSEMDU8IWdPrWGskjEvQs--v_ASHpFRKiyVkELVfFFBcRHZtDQWLJ_GCgD7408WFO16NZaG_LzHMMxBSCztbL6p7_BvR-6U6_W2WNZJMO3a6eRZ9J3a=s1360-w1360-h1020-rw" alt="Galeria 6">
+              <div class="btn-box">
+                <a href="images/s3.jpg" data-toggle="lightbox" class="btn-1">
+                  <i class="fa fa-picture-o" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="see_btn">
+        <a href="#">
+          Ver Mais
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- fim da galeria -->
+
+  <!-- seção de contato -->
+
+  <section class="contact_section layout_padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-lg-7 mx-auto">
+          <div class="contact-form">
+            <div class="heading_container heading_center">
+              <h2 id="onde-estamos">
+                Onde nos encontrar?
+              </h2>  
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3680.683130718638!2d-43.27671759999999!3d-22.702836899999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x997162246c9e7b%3A0xa4a2b690f6484621!2sBarbaridade%20Barbearia!5e0!3m2!1spt-BR!2sbr!4v1763667724939!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+           </div>
+           
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- fim da seção de contato -->
+
+  <!-- seção de depoimentos -->
+
+  <section class="client_section layout_padding">
+    <div class="container">
+      <div class="heading_container">
+        <h2>
+          Depoimentos de Clientes
+        </h2>
+      </div>
+    </div>
+    
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="img_container">
+                  <div class="img-box">
+                    <img src="images/s2.jpg" alt="Cliente">
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="detail-box">
+                  <h3>
+                    Renan Santos
+                  </h3>
+                  <p>
+                    “Eu nunca tinha ido a uma barbearia antes, mas a experiência me surpreendeu! Fui muito bem atendida desde o momento em que entrei. O ambiente é organizado, moderno e super confortável. Expliquei como queria meu cabelo e o barbeiro foi extremamente atencioso, deixando tudo exatamente do jeito que imaginei. Além disso, o cuidado e a atenção aos detalhes fizeram toda a diferença. Com certeza virei cliente fixa. Recomendo demais!”
+                  </p>
+                  <i class="fa fa-quote-left" aria-hidden="true"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="img_container">
+                  <div class="img-box">
+                    <img src="" alt="Cliente">
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="detail-box">
+                  <h3>
+                    Nomoden
+                  </h3>
+                  <p>
+                    Depoimento de cliente exemplo para preencher a área de avaliações.
+                  </p>
+                  <i class="fa fa-quote-left" aria-hidden="true"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+  </section>
+
+  <!-- fim dos depoimentos -->
+
+  <!-- seção de informações -->
+  <section id="contact" class="info_section layout_padding2-top">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-lg-9">
+          <div class="row">
+            <div class="col-md-6 info_col">
+              <div class="info_detail">
+                <h5>
+                  Visite Nossa Loja
+                </h5>
+                <p>
+                  Endereço e detalhes sobre nossa barbearia. Venha nos visitar para conhecer nossos serviços.
+                </p>
+              </div>
+            </div>
+            <div class="col-md-6 info_col">
+              <div class="info_detail">
+                <h5>
+                  Atendimento ao Cliente
+                </h5>
+                <p>
+                  Atendimento atencioso e soluções rápidas para dúvidas e agendamentos.
+                </p>
+                <div class="info_timing-box">
+                  <h5 class="info_timing-heading">
+                    Horário
+                  </h5>
+                  <h6 class="">
+                    Domingo – Sexta: 10:00 – 22:00
+                  </h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-lg-3 info_col">
+          <h5>
+            Contato
+          </h5>
+          <div class="info_contact">
+            <a href="#onde-estamos">
+              <i class="fa fa-map-marker" aria-hidden="true"></i>
+              <span>
+                Localização
+              </span>
+            </a>
+            <a href="#">
+              <i class="fa fa-phone" aria-hidden="true"></i>
+              <span>
+                +01 1234567890
+              </span>
+            </a>
+            <a href="#">
+              <i class="fa fa-envelope"></i>
+              <span>
+                demo@gmail.com
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- fim da seção de informações -->
+
+  <!-- rodapé -->
+  <footer class="container-fluid footer_section">
+    <div class="row">
+      <div class="col-md-7 col-lg-5 mx-auto">
+        <p>
+          &copy; <span id="displayYear"></span> Todos os direitos reservados por Cauã Faria de Pretes Cruz
+       
+        </p>
+      </div>
+    </div>
+  </footer>
+  <!-- fim do rodapé -->
+
+  <!-- Botão fixo do WhatsApp -->
+  <a href="tel:+01 1234567890" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contato WhatsApp">
+    <i class="fa fa-whatsapp" aria-hidden="true"></i>
+  </a>
+<div class="container">
+    <div class="form-wrapper">
+      <h1>Cadastro de Agendamento Barbarida e Barber</h1>
+      <p class="subtitle">Preencha o formulário abaixo para entrar em contato</p>
+
+      <form id="leadForm">
+        <div class="form-group">
+          <label for="nome">Nome completo</label>
+          <input
+            type="text"
+            id="nome"
+            name="nome"
+            placeholder="Digite seu nome completo"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="email">E-mail</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Digite seu e-mail"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label>Telefone</label>
+          <div class="phone-group">
+            <select id="ddd" name="ddd" required>
+              <option value="">DDD</option>
+              <option>11</option>
+              <option>12</option>
+              <option>13</option>
+              <option>14</option>
+              <option>15</option>
+              <option>16</option>
+              <option>17</option>
+              <option>18</option>
+              <option>19</option>
+              <option>21</option>
+              <option>22</option>
+              <option>24</option>
+              <option>27</option>
+              <option>28</option>
+              <option>31</option>
+              <option>32</option>
+              <option>33</option>
+              <option>34</option>
+              <option>35</option>
+              <option>37</option>
+              <option>38</option>
+              <option>41</option>
+              <option>42</option>
+              <option>43</option>
+              <option>44</option>
+              <option>45</option>
+              <option>46</option>
+              <option>47</option>
+              <option>48</option>
+              <option>49</option>
+              <option>51</option>
+              <option>53</option>
+              <option>54</option>
+              <option>55</option>
+              <option>61</option>
+              <option>62</option>
+              <option>63</option>
+              <option>64</option>
+              <option>65</option>
+              <option>66</option>
+              <option>67</option>
+              <option>68</option>
+              <option>69</option>
+              <option>71</option>
+              <option>73</option>
+              <option>74</option>
+              <option>75</option>
+              <option>77</option>
+              <option>79</option>
+              <option>81</option>
+              <option>82</option>
+              <option>83</option>
+              <option>84</option>
+              <option>85</option>
+              <option>86</option>
+              <option>87</option>
+              <option>88</option>
+              <option>89</option>
+              <option>91</option>
+              <option>92</option>
+              <option>93</option>
+              <option>94</option>
+              <option>95</option>
+              <option>96</option>
+              <option>97</option>
+              <option>98</option>
+              <option>99</option>
+            </select>
+            <input
+              type="text"
+              id="numero"
+              name="numero"
+              placeholder="Número do telefone"
+              maxlength="10"
+              required
+            />
+          </div>
+        </div>
+
+        <button type="submit" id="submitBtn">
+          <span id="btnText">Enviar</span>
+          <span id="btnLoader" class="loader hidden"></span>
+        </button>
+      </form>
+
+      <div id="message" class="message hidden"></div>
+    </div>
+  </div>
+
+
+</body>
+<script src="menu.js"></script>
+
+</html>
